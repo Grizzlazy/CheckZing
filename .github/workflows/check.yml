@@ -19,12 +19,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
       
-      - name: Download artifacts
-        uses: actions/download-artifact@v4
-        with:
-          name: json-results-${{ matrix.number_of_cities }}-${{ matrix.data_set }}-${{ matrix.segment }}-iter-${{ matrix.iteration }}
-          path: .
-      
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
