@@ -430,7 +430,8 @@ def Tabu_search_for_CVRP(CC):
     return best_fitness, best_sol, data_to_write
 
 # Thư mục chứa các file .txt
-folder_path = "test_data/data_demand_random/"+str(number_of_cities)
+# folder_path = "test_data/data_demand_random/"+str(number_of_cities)
+folder_path = "test_data/Smith/TSPrd(time)/Solomon/"+str(number_of_cities)
 # folder_path = "test_data\\Smith\\TSPrd(time)\\Solomon\\50\\0_5TSP_50"
 # folder_path = "test_data\\Smith\\TSPrd(time)\\Solomon\\15"
 
@@ -466,7 +467,7 @@ for txt_file in txt_files:
             BEST = []
             print("------------------------",i,"------------------------")
             start_time = time.time()
-            best_fitness, best_sol, data_to_write, runtime = Tabu_search_for_CVRP(1)
+            best_fitness, best_sol, data_to_write = Tabu_search_for_CVRP(1)
             end_time = time.time()
             workbook = openpyxl.Workbook()
             sheet = workbook.active
@@ -480,7 +481,7 @@ for txt_file in txt_files:
             result.append(best_fitness)
             # print(Function.Check_if_feasible(best_sol))
             column += 1
-            run = end_time - start_time + runtime
+            run = end_time - start_time
             run_time.append(run)
             avg_run_time += run/ITE
             sheet.cell(row=row, column=column, value=best_fitness)
