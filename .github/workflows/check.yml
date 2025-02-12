@@ -38,7 +38,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: json1-results-${{ matrix.number_of_cities }}-${{ matrix.data_set }}-${{ matrix.segment }}-iter-${{ matrix.iteration }}
-          path: Random_*_CL2.json
+          path: Random_*_CL2.xlsx
   
   summary:
     name: Summary results
