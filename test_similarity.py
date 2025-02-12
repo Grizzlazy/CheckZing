@@ -372,7 +372,7 @@ def Tabu_search_for_CVRP(CC):
     list_init = []
     
     start_time = time.time()
-    current_sol5 = Function.initial_solution3()
+    current_sol5 = Function.initial_solution7()
     list_init.append(current_sol5)
 
     
@@ -457,7 +457,7 @@ for txt_file in txt_files:
         # log_file_path = os.path.join(log_folder, log)
         # log_file = open(log_file_path, 'w')
         # sys.stdout = log_file
-        Data.read_data_random(txt_file)
+        Data.read_data(txt_file)
         result = []
         run_time = []
         avg = 0
