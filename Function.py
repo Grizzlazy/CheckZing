@@ -537,10 +537,10 @@ def initial_solution7():
     current_fitness = fitness(current_sol)[0]
     best_sol = current_sol
     best_fitness = current_fitness
-    LOOP = Data.number_of_cities
+    END_SEGMENT = Data.number_of_cities
     i = 0
 
-    while i < LOOP:
+    while i < END_SEGMENT:
         neighborhood = []
         
         a = random.random()
