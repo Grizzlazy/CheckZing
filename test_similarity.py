@@ -34,15 +34,15 @@ LOOP_IMPROVED = 0
 SET_LAST_10 = [] 
 BEST = []
 # 
-number_of_cities = int(os.getenv('NUMBER_OF_CITIES', 20)) 
+number_of_cities = int(os.getenv('NUMBER_OF_CITIES')) 
 delta = Data.delta
 alpha = Data.alpha
 theta = Data.theta
-data_set = str(os.getenv('DATA_SET', 'C101_1.dat'))
+data_set = str(os.getenv('DATA_SET'))
 solution_pack_len = 0
 TIME_LIMIT = 14000
-SEGMENT = int(os.getenv('SEGMENT', 12))
-ite = int(os.getenv('ITERATION', 1))
+SEGMENT = int(os.getenv('SEGMENT'))
+ite = int(os.getenv('ITERATION'))
 def roulette_wheel_selection(population, fitness_scores):
     total_fitness = sum(fitness_scores)
     probabilities = [score / total_fitness for score in fitness_scores]
