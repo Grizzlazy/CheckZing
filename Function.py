@@ -761,7 +761,6 @@ def max_release_date(point):
     if point == []: return 0
     array = []
     for i in range(len(point)):
-        print(point[i])
         array.append(Data.release_date[point[i]])
     return max(array)
 

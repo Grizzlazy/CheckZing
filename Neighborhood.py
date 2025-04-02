@@ -385,7 +385,6 @@ def swap_two_array(solution):
                             # print(aa)
                             # print(drop_package[x])
                             # print(new_solution)
-                            print(new_solution, aa, drop_package[x])
                             new_solution = findLocationForDropPackage(new_solution, aa, drop_package[x])
                         # print(new_solution[0])
                         # print("hehe")
