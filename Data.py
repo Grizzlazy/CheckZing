@@ -12,7 +12,7 @@ number_of_cities = 0
 number_of_drones = 2
 truck_speed = 0.5
 drone_speed = 1
-drone_capacity = 8
+drone_capacity = 4
 drone_limit_time = 90
 city_demand = []
 release_date = []
@@ -228,5 +228,3 @@ def read_data_random(path):
 
 
 # read_data_random(file_path)
-
-# read_data_random("test_data\\data_demand_random\\Solomon\\50\\C101_0.5.dat")

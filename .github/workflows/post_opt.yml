@@ -1,0 +1,31 @@
+name: Workflow name
+
+on: push
+
+permissions:
+  contents: read
+
+jobs:
+  post-optimization:
+    name: Run post-optimization
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install requirements
+        run: pip install -r requirements.txt
+        
+      - name: Run post_optimization.py
+        run: python post_optimization.py
+
+      - name: Upload result Excel file as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: post-optimization-results
+          path: post-optimization1.xlsx

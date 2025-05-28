@@ -34,15 +34,15 @@ LOOP_IMPROVED = 0
 SET_LAST_10 = [] 
 BEST = []
 # 
-number_of_cities = int(os.getenv('NUMBER_OF_CITIES')) 
+number_of_cities = int(os.getenv('NUMBER_OF_CITIES', 20)) 
 delta = Data.delta
 alpha = Data.alpha
 theta = Data.theta
-data_set = str(os.getenv('DATA_SET'))
+data_set = str(os.getenv('DATA_SET', 'C101_0.5.dat'))
 solution_pack_len = 0
 TIME_LIMIT = 14000
-SEGMENT = int(os.getenv('SEGMENT'))
-ite = int(os.getenv('ITERATION'))
+SEGMENT = int(os.getenv('SEGMENT', 12))
+ite = int(os.getenv('ITERATION', 1))
 def roulette_wheel_selection(population, fitness_scores):
     total_fitness = sum(fitness_scores)
     probabilities = [score / total_fitness for score in fitness_scores]
@@ -388,6 +388,7 @@ def Tabu_search_for_CVRP(CC):
     
     start_time = time.time()
     current_sol5 = Function.initial_solution7()
+    print("Initial solution: ", current_sol5)
     list_init.append(current_sol5)
 
     
